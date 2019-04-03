@@ -18,14 +18,29 @@
     <article class="counter">
       <h2>The count is even!</h2>
       <p class="count">0</p>
-      <button>Increment by 1</button>
-      <button>Decrement by 1</button>
+      <button v-on:click="increment">Increment by 1</button>
+      <button v-on:click="decrement">Decrement by 1</button>
       <div class="input-group">
         <label for="amount">Amount</label>
         <input type="number" name="amount">
       </div>
     </article>
   </main>
+<script>
+  const app = new Vue ({
+    el: 'app',
+    data: {
+      count: 0
+      }
+  methods: {
+    increment: function(){
+    this.count++
+    }
+    decrement: function(){
+    this.count--
+    }
+   }
+
 </body>
 
 </html>
